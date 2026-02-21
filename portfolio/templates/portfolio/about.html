@@ -1,0 +1,91 @@
+{% extends 'portfolio/base.html' %}
+{% block content %}
+
+<!-- HERO SECTION -->
+<section class="about-hero container">
+
+    <div class="about-left">
+        <h1 class="about-title">
+            Hi, I'm Samridhi —
+            <br>AI Developer & Creative Technologist
+        </h1>
+
+        <p class="hero-subtext">
+            AI Developer. Software Engineer. Lyricist. Artist.
+            Building logic with soul.
+        </p>
+    </div>
+
+    <div class="about-right">
+        <div class="image-wrapper tilt">
+            <img 
+                src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=800&q=80"
+                alt="Profile"
+                class="profile-img">
+        </div>
+    </div>
+
+</section>
+
+<!-- STORY -->
+<section class="container compact-section">
+    <div class="glass-card about-card">
+
+        <p>
+            I'm <strong>Samridhi Aggarwal</strong> — an AI Developer and Software Engineer 
+            who thrives at the intersection of logic and imagination.
+        </p>
+
+        <p>
+            I design intelligent systems, scalable backend architectures, 
+            and clean modern web experiences.
+        </p>
+
+        <p class="highlight-line">
+            I don't just build software. I build experiences.
+        </p>
+
+    </div>
+</section>
+
+<!-- SKILLS -->
+<section class="container compact-section">
+    <div class="glass-card skills-card">
+
+        <h2 class="section-title">Technical Skills</h2>
+
+        <div class="skills-grid">
+
+            <div class="skill">Python</div>
+            <div class="skill">Django</div>
+            <div class="skill">AI / ML</div>
+            <div class="skill">Cloud</div>
+
+        </div>
+
+    </div>
+</section>
+
+<!-- POETRY -->
+<section class="container compact-section">
+    <div class="glass-card poem-box">
+
+        <h2 class="section-title">Poetry</h2>
+
+        <button class="poem-toggle btn-secondary">
+            Reveal Poem ✨
+        </button>
+
+        <div class="poem-content">
+            {% if poem %}
+                <h3>{{ poem.title }}</h3>
+                <p>{{ poem.content|linebreaksbr }}</p>
+            {% else %}
+                <p>No poem added yet.</p>
+            {% endif %}
+        </div>
+
+    </div>
+</section>
+
+{% endblock %}

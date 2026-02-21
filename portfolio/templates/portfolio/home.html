@@ -1,0 +1,73 @@
+{% extends 'portfolio/base.html' %}
+{% load static %}
+{% block content %}
+
+<!-- HERO -->
+<section class="hero modern-hero">
+    <div class="container hero-grid">
+
+        <!-- LEFT SIDE -->
+        <div class="hero-content">
+            <p class="hero-tag">
+                INTERN SOFTWARE ENGINEER · AI BACKEND
+            </p>
+
+            <h1 class="hero-title">
+                Hi, I'm <span class="accent">Samridhi</span>
+            </h1>
+
+            <p class="hero-sub">
+                I build scalable backend systems and intelligent AI architectures
+                that perform under pressure.
+            </p>
+
+            <div class="hero-actions">
+                <a href="{% url 'projects' %}" class="btn-primary">
+                    View Work
+                </a>
+
+                <a href="/media/resumes/Samridhi_Aggarwal_ATS_resume.pdf"
+                   class="btn-secondary">
+                    Resume
+                </a>
+            </div>
+        </div>
+
+        <!-- RIGHT SIDE IMAGE -->
+        <div class="hero-image">
+            <img src="{% static 'portfolio/images/profile.png' %}" alt="Profile">
+        </div>
+
+    </div>
+</section>
+
+
+<!-- TECH STACK -->
+<section class="section tech-section">
+
+    <div class="container">
+
+        <h2 class="section-title">Tech Stack</h2>
+
+        <div class="stack-grid">
+            <div class="stack-card">
+                <h3>Backend</h3>
+                <p>Python · Django · REST APIs · SQL</p>
+            </div>
+
+            <div class="stack-card">
+                <h3>AI & Data</h3>
+                <p>Machine Learning · CNN · Model Deployment</p>
+            </div>
+
+            <div class="stack-card">
+                <h3>Cloud & Dev</h3>
+                <p>Git · CI/CD · Cloud Architecture</p>
+            </div>
+        </div>
+
+    </div>
+
+</section>
+
+{% endblock %}

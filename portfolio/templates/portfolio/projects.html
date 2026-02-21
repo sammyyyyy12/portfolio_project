@@ -1,0 +1,74 @@
+{% extends 'portfolio/base.html' %}
+{% load static %}
+{% block content %}
+
+<!-- HERO -->
+<section class="hero container">
+
+    <div class="hero-grid">
+
+        <!-- LEFT SIDE (TEXT) -->
+        <div class="hero-content">
+            <h1 class="hero-title">
+                Hi, I'm <span class="gradient-text">Samridhi</span> 
+            </h1>
+
+            <p class="hero-subtitle">
+                AI Developer & Software Engineer building intelligent systems,
+                scalable backend architectures, and futuristic web experiences.
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+            </p>
+        </div>
+
+        <!-- RIGHT SIDE (IMAGE) -->
+        <div class="hero-image">
+            <img src="{% static 'portfolio/images/profile.png' %}" alt="Samridhi">
+        </div>
+
+    </div>
+
+</section>
+
+<!-- PROJECTS FIRST (Main Focus) -->
+<section class="section container">
+
+    <h2 class="section-title">My Projects</h2>
+
+    <div class="projects-grid">
+        {% for project in projects %}
+        <div class="project-card">
+            <h3>{{ project.title }}</h3>
+            <p class="project-desc">{{ project.description }}</p>
+            <p class="project-tech">
+                <strong>Tech:</strong> {{ project.tech_stack }}
+            </p>
+            <a href="{{ project.github_link }}" target="_blank" class="project-link">
+                View Code →
+            </a>
+        </div>
+        {% endfor %}
+    </div>
+
+</section>
+
+
+<!-- TECH STACK COMPACT STRIP -->
+<section class="section container tech-strip">
+
+    <h3 class="tech-title">Tech Stack</h3>
+
+    <div class="tech-badges">
+        <span>Python</span>
+        <span>Django</span>
+        <span>REST APIs</span>
+        <span>SQL</span>
+        <span>Git</span>
+        <span>AI/ML</span>
+        <span>Cloud</span>
+        <span>Java</span>
+        <span>HTML,CSS</span>
+    </div>
+
+</section>
+
+{% endblock %}
